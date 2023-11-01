@@ -31,3 +31,4 @@ coverage
 *.sw?
 !/vue-create-Utils/baibaoxiang-frontend/node_modules/
 
+/baibaoxiang/baibaoxiang-fronted/baibaoxiang-fronted.iml

@@ -4,19 +4,10 @@ springdoc:
   swagger-ui:
     operations-sorter: alpha
 spring:
-  mail:
-    host: smtp.163.com
-    username: javastudy111@163.com
-    password: QGLYGBVECIASGPWQ
-  rabbitmq:
-    addresses: localhost
-    username: admin
-    password: admin
-    virtual-host: /
   datasource:
     url: jdbc:mysql://localhost:3306/study?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
     username: root
-    password: root
+    password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
   security:
     jwt:

@@ -5,12 +5,11 @@ import {DataLine, Lock} from "@element-plus/icons-vue";
 import {ref} from "vue"
 
 
-const  activeMenuItem = ref('3')
+const  activeMenuItem = ref('/toolbox/')
 
-function  changeActiveMenuItem(index) {
-    this.activeMenuItem = index;
+function  changeActiveMenuItem(menuItemPath) {
+    this.activeMenuItem = menuItemPath;
 }
-
 
 </script>
 
@@ -24,15 +23,15 @@ function  changeActiveMenuItem(index) {
 
             >
                 <el-menu-item index="/toolbox/"
-                              :class="{ 'selected-menu-item': activeMenuItem === '3' }"
-                              @click="changeActiveMenuItem('3')"
+                              :class="{ 'selected-menu-item': activeMenuItem === '/toolbox/' }"
+                              @click="changeActiveMenuItem('/toolbox/')"
                               class="tool-menu-item">
                     <el-icon class="icon-align"><DataLine /></el-icon>
                     <span>万能转换器</span>
                 </el-menu-item>
                 <el-menu-item index="/toolbox/encrypt-tool"
-                              :class="{ 'selected-menu-item': activeMenuItem === '4' }"
-                              @click="changeActiveMenuItem('4')"
+                              :class="{ 'selected-menu-item': activeMenuItem === '/toolbox/encrypt-tool' }"
+                              @click="changeActiveMenuItem('/toolbox/encrypt-tool')"
                               class="tool-menu-item">
                     <el-icon class="icon-align"><Lock /></el-icon>
                     <span>加密工具</span>
@@ -50,9 +49,13 @@ function  changeActiveMenuItem(index) {
 </template>
 
 <style scoped>
+
+
 .dark .tool-menu-item:hover,
 .dark .selected-menu-item {
     background-color: #1e1e1e; /* 设置选中项的背景颜色 */
+
+
 }
 .tool-menu-item:hover,
 .selected-menu-item{
@@ -60,14 +63,14 @@ function  changeActiveMenuItem(index) {
 }
 
 .tool-list-menu{
-    border-right: none;
+    border: none;
 
     .tool-menu-item{
         height: 30px;
         font-size: 15px;
         border-radius: 5px;
         margin-bottom: 8px;
-        padding-left: 2px;
+        padding: 0 10px;
     }
 }
 
@@ -93,4 +96,5 @@ function  changeActiveMenuItem(index) {
     border-radius: 5px;
     margin-top: 10px;
 }
+
 </style>
